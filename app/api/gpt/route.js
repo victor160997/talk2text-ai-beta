@@ -4,7 +4,7 @@ export const POST = async (request) => {
   try {
     const { text } = await request.json();
     const llm = new OpenAI({
-      openAIApiKey: "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",
+      openAIApiKey: process.env.OPENAI_API_KEY,
       temperature: 1,
       modelName: "gpt-3.5-turbo-16k"
     });
