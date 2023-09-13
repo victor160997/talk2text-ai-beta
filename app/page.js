@@ -28,7 +28,7 @@ export default function Home() {
     if (isSend) {
       console.log({ transcript });
       axios
-        .post("http://localhost:3000/api/gpt", {
+        .post("https://talk2text-ai-beta.vercel.app/api/gpt", {
           text: transcript,
         })
         .then((response) => {
