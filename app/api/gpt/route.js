@@ -8,7 +8,7 @@ export const POST = async (request) => {
       temperature: 1,
       modelName: "gpt-3.5-turbo-16k"
     });
-    const result = await llm.predict(`Transforme essa transcrição de audio em texto deixando o mais fiel possível ao audio: ${text}`);
+    const result = await llm.predict(`Essa é uma transcrição de audio, formate para um texto mais compreensível tirando partes desnecessárias: ${text}`);
 
     return new Response(JSON.stringify(result), { status: 200 })
   } catch (error) {
